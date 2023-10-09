@@ -1500,7 +1500,7 @@ li > .menu__container > .grid__controling .control_center--grid {
     display: grid;
     grid-row-gap: 10px;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 30% 30% 30% 30% 30% 30% 30% 30% 30% 30% 30% 30% 30%;
+    grid-template-rows: 30% 30% 30% 30% 30% 30% 30% 30% 30% 30% 30% 30% 30% 30% 30%;
     text-align: center;
   }
   
