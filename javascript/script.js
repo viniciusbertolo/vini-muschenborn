@@ -343,6 +343,16 @@ var full_eu = document.querySelector(".full-eu");
 
 
 
+var open_ccab_lauching = document.querySelector(".open-ccab-lunching");
+var open_maps_lauching = document.querySelector(".open-maps-lunching");
+var open_cv_lauching = document.querySelector(".open-cv-lunching");
+var open_eu_lauching = document.querySelector(".open-eu-lunching");
+var open_fotos_lauching = document.querySelector(".open-fotos-lunching");
+
+
+
+
+
 
 
 
@@ -778,6 +788,30 @@ open_eu.addEventListener("click", () =>
 );
 backfull_eu.addEventListener("click", () => handleMinimize(eu_window));
 //END EU
+
+
+
+
+
+
+
+
+
+open_ccab_lauching.addEventListener("click", () =>
+  open_window(ellosccab_window, point_ellosccab, app_name_ellosccab)
+);
+open_cv_lauching.addEventListener("click", () =>
+  open_window(cv_window, point_cv, app_name_cv)
+);
+open_eu_lauching.addEventListener("click", () =>
+  open_window(eu_window, point_eu, app_name_eu)
+);
+open_fotos_lauching.addEventListener("click", () =>
+  open_window(fotos_window, point_fotos, app_name_fotos)
+);
+open_maps_lauching.addEventListener("click", () =>
+  open_window(maps_window, point_map, app_name_maps)
+);
 
 
 

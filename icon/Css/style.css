@@ -25,11 +25,7 @@
   list-style: none;
 }
 
-@media screen and (max-width: 900px) {
-  .hidden {
-    display: none;
-  }
-}
+
 
 button,
 input {
@@ -536,11 +532,11 @@ li > .menu__container > .grid__controling .control_center--grid {
   z-index: 10;
 }
 
-@media screen and (max-width: 900px) {
-  .dock {
-    border-radius: 20px;
-  }
+.dock_mobile{
+  display: none;
 }
+
+
 
 .dock .point {
   width: 6px;
@@ -1049,7 +1045,7 @@ li > .menu__container > .grid__controling .control_center--grid {
   display: grid;
   grid-row-gap: 10px;
   grid-template-columns: 20% 20% 20% 20% 20%;
-  grid-template-rows: 30% 30% 30% 30% 30%;
+  grid-template-rows: 30% 30% 30% 30% 30% 30%;
 }
 
 .launchpad .child-launchpad {
@@ -1057,13 +1053,14 @@ li > .menu__container > .grid__controling .control_center--grid {
   place-items: center;
   flex-direction: column;
   cursor: url(https://mhmdmhd6.github.io/cursor/Link.cur), pointer;
+  text-align: center;
 }
 
 .launchpad .child-launchpad img {
   width: 80px;
 }
 
-@media screen and (min-width: 1200px) {
+/* @media screen and (min-width: 1200px) {
   .launchpad .Apps-container {
     grid-row-gap: 20px;
   }
@@ -1073,7 +1070,7 @@ li > .menu__container > .grid__controling .control_center--grid {
   .launchpad .child-launchpad strong {
     font-size: 18px;
   }
-}
+} */
 
 .launchpad .child-launchpad:active {
   animation: vibrate 0.1s ease-in forwards infinite alternate;
@@ -1469,4 +1466,183 @@ li > .menu__container > .grid__controling .control_center--grid {
 .window .content .allwindow .swiper-slide img {
   display: block;
   width: 100%;
+}
+
+
+
+
+@media screen and (max-width: 900px) {
+
+  .launchpad {
+    display: flex;
+    animation: opacity 300ms;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    align-items: center;
+    justify-content: center;
+  
+    
+  }
+  .launchpad .Apps-container {
+    overflow-y: scroll;
+    height: 70vh;
+    padding-top: 30px;
+    
+  }
+
+
+  .Apps-container {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-row-gap: 10px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 30% 30% 30% 30% 30% 30% 30% 30% 30% 30% 30% 30% 30%;
+    text-align: center;
+  }
+  
+  .launchpad .child-launchpad {
+    display: flex;
+    place-items: center;
+    flex-direction: column;
+    cursor: url(https://mhmdmhd6.github.io/cursor/Link.cur), pointer;
+  }
+  
+  .launchpad .child-launchpad img {
+    width: 80px;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+
+  .dock_mobile{
+    display: flex;
+  align-items: center;
+  position: fixed;
+  padding: 0.2rem 0.5rem 0 0.5rem;
+  bottom: 3%;
+  left: 50%;
+  height: 65px;
+  transform: translateX(-50%);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--color-white-200);
+  border-radius: 14px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.555);
+  z-index: 10;
+  }
+
+  .dock{
+    display: none;
+  }
+
+
+
+  .dock_mobile .point {
+    width: 6px;
+    height: 6px;
+    margin: 0;
+    background: #f08080;
+    border-radius: 50%;
+    display: none;
+    animation: top-to-bottom 0.3s;
+    transition: 0.3s;
+  }
+  
+  .dock_mobile .column {
+    width: 1px;
+    height: 45px;
+    margin: 0 4px;
+    background: var(--color-white-400);
+  }
+  
+  .dock_mobile .icon {
+    position: relative;
+    display: grid;
+    place-items: center;
+    background: none;
+    border: none;
+    outline: none;
+    transition: all 0.3s;
+    transform: translate3d(0px, 0%, 0px);
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  .dock_mobile .icon::after {
+    font-size: 15px;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.39);
+    top: -25%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    width: 95px;
+    height: 25px;
+    padding: 4px 3px 10px;
+    border-radius: 8px;
+    font-family: "lexend", sans-serif;
+    font-weight: 700;
+    clip-path: polygon(
+      100% 0%,
+      100% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 80%,
+      43% 80%,
+      50% 101%,
+      57% 80%,
+      100% 80%,
+      100% 0%
+    );
+  }
+  
+  .dock_mobile .icon{
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .dock_mobile .icon:nth-child(1):hover::after {
+    content: "Projetos";
+  }
+  
+  .dock_mobile .icon:nth-child(2):hover::after {
+    content: "Currículo";
+  }
+  
+  .dock_mobile .icon:nth-child(3):hover::after {
+    content: "Whatsapp";
+  }
+  
+  
+  
+  
+  .dock_mobile .icon img {
+    width: 3.6rem;
+    transition: 0.2s;
+    transform: translateY(-2.5px);
+  }
+  
+  .dock_mobile .icon:hover img {
+    margin: 0 0 40px 0;
+    width: 7.1rem;
+  }
+  .dock_mobile .icon:hover + .icon img {
+    width: 5.6rem;
+    margin: 0 0 25px 0;
+  }
+  
+  .dock_mobile .icon img:active {
+    filter: brightness(0.6) drop-shadow(0 0 10px #2c2c2c);
+  }
 }
